@@ -1,0 +1,71 @@
+{
+  "algorithm": "Random Forest",
+  "classes": [
+    "Rendah",
+    "Sedang",
+    "Tinggi"
+  ],
+  "features": [
+    "sleep_hours_per_day",
+    "study_hours_per_week",
+    "academic_pressure_score",
+    "anxiety_score",
+    "depression_score",
+    "burnout_score",
+    "attendance_rate",
+    "missed_submissions_count"
+  ],
+  "feature_ranges": {
+    "sleep_hours_per_day": [
+      4.0,
+      10.0
+    ],
+    "study_hours_per_week": [
+      2.0,
+      35.0
+    ],
+    "academic_pressure_score": [
+      0.0,
+      10.0
+    ],
+    "anxiety_score": [
+      0.0,
+      10.0
+    ],
+    "depression_score": [
+      0.0,
+      10.0
+    ],
+    "burnout_score": [
+      0.0,
+      10.0
+    ],
+    "attendance_rate": [
+      0.0,
+      1.0
+    ],
+    "missed_submissions_count": [
+      0.0,
+      20.0
+    ]
+  },
+  "dataset": {
+    "name": "Student Early Stress Detection",
+    "author": "Rishav Raj",
+    "rows": 102714,
+    "columns": 39
+  },
+  "validation": "80/20 stratified split + 5-fold CV",
+  "metrics": {
+    "accuracy": 0.9989290755975271,
+    "macro_f1": 0.9983512635742549,
+    "cv_macro_f1": {
+      "Logistic Regression": 0.9977842375471454,
+      "Random Forest": 0.9978721161820548
+    }
+  },
+  "test_rows": 20543,
+  "excluded_sources": [
+    "mental_health"
+  ]
+}
